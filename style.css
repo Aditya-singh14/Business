@@ -1,0 +1,404 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+#header{
+    height:100vh;
+    background-image: url(images/background.png);
+    background-position: center;   /* Image is at center*/
+    background-size: cover;/* Image takes full width of browser*/
+}
+.container{
+    margin-left:  100px;
+    margin-right:  100px;
+}
+.logo{
+    margin-top:30px;
+    width: 100px;
+}
+.header-text{
+    max-width: 350px;
+    /*padding-top:100px;*/
+    margin-top: 140px;
+}
+h1{
+    font-size: 34px;
+}
+.square{
+    height:12px;
+    width:12px;
+    display:inline-block;
+    background:#f67c92 ;
+    margin:15px 0;
+}
+.btn{
+    padding:20px 40px;/*20px is Top and bottom and 40px is for left and right*/
+    background: transparent;
+    outline:none;
+    border:2px solid #f67c92;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+p{
+    font-size: 16px;
+    line-height: 18px;
+    color:#777
+}
+.header-text button{
+    margin-top:20px;
+    margin-bottom: 60px;/* margin-bottom: 60px; it allows the below lines to have some gap(padding)*/
+
+}
+.line-1{
+    width:10px;
+    height:10px;
+    background:#f67c92;
+    display:inline-block;
+}
+.line-2{
+    width:50px;
+    height:1px;
+    background:#f67c92;
+    display:inline-block;
+}
+.line-3{
+    width:80px;
+    height:1px;
+    background:#f67c92;
+    display:inline-block;
+}
+.line{
+    line-height: 8px;
+}
+#sidenav{
+    width:250px;
+    height:100vh;/*Takes view port (full) size of the browser*/
+    position:fixed;/**/
+    right:0;
+    top:0;
+    background:#f67c92;
+    z-index: 2;
+    display:none; /*Its is hidden but still there but it is not visible and does not even takes space of the browser*/ 
+}
+nav ul li{
+    list-style: none;/*Removes the list points */
+    margin:50px;
+}
+nav ul li a{
+    text-decoration: none;/*Removes Underline*/
+    color: #fff;
+}
+#menubtn{
+    width:45px;
+    position:fixed;
+    right:40px;/*Right:0 means top most right in the browser similarly right:20px is 20 px gap from right side of browser */
+    top:20px; /*top:0 means top of the browser similarly top:20px; means 20p gap from top  */
+    z-index:2;
+    cursor:pointer;
+}
+
+/*------About------*/
+#about,#offer{
+    padding:100px 0;/*100 for top and bottom and 0 for left and right*/
+    display:flex;/*This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.*/
+    flex-wrap: wrap; /*By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.*/
+    align-items: center;
+}
+.about-left-col{
+    flex-basis:50%;/*This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated)*/
+}
+.about-left-col img{
+    width:100%;
+}
+.about-right-col{
+    flex-basis: 50%;
+    text-align:right;
+}
+.about-text{
+    max-width:500px;
+    margin-right: 100px;
+    display:inline-block;
+}
+.about-text h3{
+    margin:50px 0 10px;
+    font-size:20px;
+    font-style:italic;
+}
+.about-text h4{
+    margin:20px 0 10px;
+    font-size:15px;
+    font-style:italic;
+    color:#797979
+}
+#features{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.feature-row{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    margin:auto;
+    flex-wrap: wrap;
+}
+.feature-col{
+    flex-basis:25%;
+    text-align:center;
+}
+.feature-col img{
+    width:100px;
+    font-weight: 400;
+    font-size:20px;
+}
+.feature-btn{
+    margin:80px auto 0;
+    display:flex;
+    align-items: flex-end;/*flex-end / end / self-end: items are placed at the end of the cross axis.*/
+    justify-content:center;
+}
+.feature-btn .line{
+    text-align:right;
+    display:inline-block;
+    margin-right: 50px;
+}
+
+/*Course*/
+#course{
+    padding:100px 0;
+}
+.course-row{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.course-right-col{
+    flex-basis:50%;
+}
+.course-right-col img{
+    width:100%;
+}
+.course-left-col{
+    flex-basis:50%; /* Occupies 50% of flex*/
+}
+.course-text{
+    max-width:350px;
+}
+.course-text button{
+    margin:30px 0 ;
+}
+
+/*--offer---*/
+#offer button{
+    margin:30px 0; /*30px from top and bottom 0 from left & right*/
+}
+
+/*--Contact---*/
+.contact-row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-left-col,.contact-right-col{
+    flex-basis:50%;
+}
+.contact-right-col img{
+    width:100%
+}
+form{
+    max-width: 350px;
+    margin:30px 0;
+}
+form input{
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing:border-box ;
+    border:2px solid #fab3c4;
+}
+.btnbox{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.btnbox button{
+    flex-basis:48%;
+    padding:18px 0;
+}
+#footer{
+    padding:50px 0 30px;
+}
+hr{
+    width:100%;
+    border:0;
+    border-top: 1px solid #f67c92;
+}
+.footer-row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left-col{
+    flex-basis: 50%;
+    margin-top: 60px;
+}
+.footer-right-col{
+    flex-basis: 35%;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.link-title h4{
+    color:#fab3c4;
+    margin-bottom: 20px;
+}
+.link-title small{
+    font-size: 13px;
+    color:#777;
+}
+.footer-info{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    color:#777
+}
+.footer-logo img{
+    width:100px;
+}
+.footer-logo button{
+    padding:12px 38px;
+    margin-top: 20px;
+    font-size: 10px;
+
+}
+.copyright-text,.footer-logo{
+    flex-basis: 405;
+}
+
+/*Social media Icons*/
+
+.social-icons{
+    width:50px;
+    position:fixed;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    z-index:1;
+}
+.social-icons img{
+    display:block;
+    width:20px;
+    margin:0 auto 20px;
+    cursor: pointer;
+}
+@media only screen and (max-width:770px){
+    #header{
+        background-image: none;
+    }
+    .container{
+        margin-left:  100px;
+        margin-right:  100px;
+    }
+    .logo{
+        margin-top:26px;
+        width: 70px;
+    }
+    .header-text{
+        /* max-width: 350px; */
+        /*padding-top:100px;*/
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 34px;
+    }
+    #menubtn{
+    width:40px;
+    right:50px;/*Right:0 means top most right in the browser similarly right:20px is 20 px gap from right side of browser */
+    top:20px; /*top:0 means top of the browser similarly top:20px; means 20p gap from top  */
+    z-index:2;
+    cursor:pointer;
+    }
+    .btn{
+    padding:20px 40px;/*20px is Top and bottom and 40px is for left and right*/
+    }
+    .social-icons img{
+    display:block;
+    width: 14px;
+    margin:15px auto 20px;
+    cursor: pointer;
+    }
+    .about-left-col, .about-right-col{
+    flex-basis:1000%;/*This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated)*/
+    }
+    .about-text{
+    margin: 50px 0 10px;
+    display:inline-block;
+    }
+    .about-text h3{
+    margin:50px 0 10px;
+    font-size:20px;
+    font-style:italic;
+    }
+    .feature-col{
+    flex-basis:  100%;
+    margin-bottom: 20px;
+    }
+    .course-left-col{
+    flex-basis:100%;
+    }
+    .course-right-col{
+    flex-basis:100%;
+    margin-top: 70px;
+    }
+    .contact-left-col,.contact-right-col{
+    flex-basis:100%;
+    }
+    .footer-left-col,.footer-right-col{
+    flex-basis:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
